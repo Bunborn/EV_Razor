@@ -10,16 +10,22 @@ rho    = 1.20; % kg/m^3
 g      = 9.81; % m/s^2
 alpha  = 0; % grade %
 %% HV Parameters
+% Based on the A123 LiFePO4 26650 ANR26650M1B
 
 %% Motor Parameters
 % Based on the Parker GVM210-300R
 Max_Mot_Trq = 527; % Nm
 Mot_Base_Spd = 415.11; % Rad/sec
+Mot_Max_Spd = 837; % Rad/sec
 Mot_Peak_Power = 246000; % Watts
 MotEff = 0.95; % Percent
+
+Lambda_M = 0.125; % Vs, Flux Linkage
+Phase_Resistance = 0.04; % Ohms
+Phase_Inductance = 0.5; % mH
+NumPoles = 6; % Makes 3 pole pairs!
 %% Generate Motor LUT
-% 8000 RPM is the max motor speed, at 837.75 rad/sec
-MotSpdBrkPts = linspace(0, 837, 100);
+MotSpdBrkPts = linspace(0, Mot_Max_Spd, 100); % 100 Break Points
 MotTrqPts = [];
 for i = MotSpdBrkPts
     if i > Mot_Base_Spd % Power Limited
