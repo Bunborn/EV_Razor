@@ -16,6 +16,7 @@ alpha  = 0; % grade %
 Max_Mot_Trq = 527; % Nm
 Mot_Base_Spd = 415.11; % Rad/sec
 Mot_Peak_Power = 246000; % Watts
+MotEff = 0.95; % Percent
 %% Generate Motor LUT
 % 8000 RPM is the max motor speed, at 837.75 rad/sec
 MotSpdBrkPts = linspace(0, 837, 100);
