@@ -1,3 +1,7 @@
+%% Clear workspace
+clear
+clc
+close all
 %% Vehicle Parameters
 igi0 = 7.0518; % Overall gear ratio
 Cr = 0.011; % Rolling resistance coefficient
