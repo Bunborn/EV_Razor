@@ -14,6 +14,7 @@ alpha  = 0; % grade %
 numCellsSeries = 203;
 numCellsParallel = 35;
 batteryCapacity = 56.84; % kwHr
+initBatteryCapacity = 0.75 * batteryCapacity; % kwHr
 %% Generate Battery LUT
 % Taken from the datasheet: Constant Power Discharge Characteristics at 23 C curve
 DOD_BrkPts = [0, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 100];
@@ -23,6 +24,7 @@ discCurveV_60W = [3.32, 3.08, 3.05, 3.03, 3.03, 3.015, 3.0, 2.975, 2.95, 2.9, 2.
 discCurveV_100W = [3.31, 2.92, 2.89, 2.86, 2.86, 2.855, 2.84, 2.81, 2.8, 2.76, 2.7, 2.6, 2.0];
 discCurveV_140W = [3.3, 2.76, 2.71, 2.7, 2.695, 2.69, 2.685, 2.67, 2.65, 2.64, 2.575, 2.35, 2.0];
 discCurveV_180W = [3.3, 2.6, 2.51, 2.49, 2.5, 2.5, 2.5, 2.5, 2.52, 2.51, 2.37, 2.2, 1.9];
+%% Motor Parameters
 % Based on the Parker GVM210-300R
 Max_Mot_Trq = 527; % Nm
 Mot_Base_Spd = 415.11; % Rad/sec
@@ -32,8 +34,8 @@ MotEff = 0.95; % Percent
 
 Lambda_M = 0.125; % Vs, Flux Linkage
 Phase_Resistance = 0.04; % Ohms
-Phase_Inductance = 0.5; % mH
-NumPoles = 6; % Makes 3 pole pairs!
+Phase_Inductance = 0.5 / 1000; % H
+NumPolePairs = 3; % Makes 6 poles!
 %% Generate Motor LUT
 MotSpdBrkPts = linspace(0, Mot_Max_Spd, 100); % 100 Break Points
 MotTrqPts = [];
