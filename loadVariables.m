@@ -35,6 +35,7 @@ Mot_Base_Spd = 415.11; % Rad/sec
 Mot_Max_Spd = 837; % Rad/sec
 Mot_Peak_Power = 246000; % Watts
 MotEff = 0.95; % Percent
+MotBaseSpd = 4000; %TODO
 
 Lambda_M = 0.125; % Vs, Flux Linkage
 Phase_Resistance = 0.04; % Ohms
