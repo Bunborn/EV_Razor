@@ -9,6 +9,7 @@ Cd = 0.23; % Aerodynamic drag coefficient
 rd = 0.325; % wheel radius (rim and tire), m
 mass = 1757.67; % mass (kg)
 Av = 2.37; % frontal area, m^2
+TransaxleEff = 0.915; % Percentage
 %% Environment Parameters
 rho    = 1.20; % kg/m^3
 g      = 9.81; % m/s^2
@@ -18,7 +19,8 @@ alpha  = 0; % grade %
 numCellsSeries = 203;
 numCellsParallel = 35;
 batteryCapacity = 56.84; % kwHr
-initBatteryCapacity = 0.75 * batteryCapacity; % kwHr
+initBatteryCapacity = 0.79 * batteryCapacity; % kwHr
+initSOC = initBatteryCapacity/batteryCapacity * 100; % Percentage
 %% Inverter Parameters
 % Based on the
 InvEff = 0.96;
@@ -37,8 +39,7 @@ Max_Mot_Trq = 527; % Nm
 Mot_Base_Spd = 415.11; % Rad/sec
 Mot_Max_Spd = 837; % Rad/sec
 Mot_Peak_Power = 246000; % Watts
-MotEff = 0.95; % Percent
-MotBaseSpd = 4000; %TODO
+MotEff = 0.92; % Percent
 
 Lambda_M = 0.125; % Vs, Flux Linkage
 Phase_Resistance = 0.04; % Ohms
