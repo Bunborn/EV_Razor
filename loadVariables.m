@@ -19,6 +19,9 @@ numCellsSeries = 203;
 numCellsParallel = 35;
 batteryCapacity = 56.84; % kwHr
 initBatteryCapacity = 0.75 * batteryCapacity; % kwHr
+%% Inverter Parameters
+% Based on the
+InvEff = 0.96;
 %% Generate Battery LUT
 % Taken from the datasheet: Constant Power Discharge Characteristics at 23 C curve
 DOD_BrkPts = [0, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 100];
