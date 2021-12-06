@@ -7,7 +7,7 @@ igi0 = 7.0518; % Overall gear ratio
 Cr = 0.011; % Rolling resistance coefficient
 Cd = 0.23; % Aerodynamic drag coefficient
 rd = 0.325; % wheel radius (rim and tire), m
-mass = 2189; % mass (kg) - As calculated from chassis + system weights
+mass = 2266.4; % mass (kg) - As calculated from chassis + system weights
 Av = 2.37; % frontal area, m^2
 TransaxleEff = 0.859; % Percentage
 %% Environment Parameters
