@@ -21,9 +21,10 @@ numCellsParallel = 35;
 batteryCapacity = 56.84; % kwHr
 initBatteryCapacity = 0.79 * batteryCapacity; % kwHr
 initSOC = initBatteryCapacity/batteryCapacity * 100; % Percentage
+Coul_eff = 0.981; % Percentage
 %% Inverter Parameters
 % Based on the
-InvEff = 0.96;
+InvEff = 0.96; % Percentage
 %% Generate Battery LUT
 % Taken from the datasheet: Constant Power Discharge Characteristics at 23 C curve
 DOD_BrkPts = [0, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 100];
@@ -41,7 +42,7 @@ Mot_Max_Spd = 837; % Rad/sec
 Mot_Peak_Power = 246000; % Watts
 MotEff = 0.92; % Percent
 
-Lambda_M = 0.125; % Vs, Flux Linkage
+Lambda_M = 0.2087; % Vs, Flux Linkage
 Phase_Resistance = 0.04; % Ohms
 Phase_Inductance = 0.5 / 1000; % H
 NumPolePairs = 3; % Makes 6 poles!
